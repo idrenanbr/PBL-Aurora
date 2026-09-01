@@ -1,0 +1,8 @@
+[2026-09-01T08:15:00] ALERTA_RECEBIDO | ALT-001 | MOD-OXI-01 | queda de pressão na linha principal
+[2026-09-01T08:15:02] REGRA_AVALIADA | ALT-001 | F OR (E AND M)=True | prioridade=critica
+[2026-09-01T09:40:00] ALERTA_RECEBIDO | ALT-002 | MOD-ENE-01 | consumo 22% acima da média
+[2026-09-01T09:40:02] REGRA_AVALIADA | ALT-002 | F OR (E AND M)=True | prioridade=alta
+[2026-09-01T10:05:00] ALERTA_RECEBIDO | ALT-003 | MOD-LAB-01 | pico temporário durante calibração
+[2026-09-01T10:05:02] REGRA_AVALIADA | ALT-003 | F OR (E AND M)=False | prioridade=normal
+[2026-09-01T11:20:00] BLOQUEIO_DE_SEGURANCA | ALT-004 | NOT(S AND D)=True | supervisão humana requerida
+[2026-09-01T12:00:00] SOLICITACAO_RECEBIDA | SOL-001 | setor=Saúde | urgente=True

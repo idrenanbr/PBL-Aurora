@@ -1,0 +1,275 @@
+{
+  "metadados": {
+    "projeto": "Núcleo Cognitivo da Aurora Siger",
+    "sigla": "NCAS",
+    "fase": 5,
+    "versao": "1.0.0",
+    "ultima_atualizacao": "2026-09-01T18:00:00",
+    "equipe": [
+      {
+        "nome": "Juan de Lucas Frois",
+        "rm": "RM563260"
+      },
+      {
+        "nome": "Flávia Roberta Pennachin",
+        "rm": "RM561860"
+      },
+      {
+        "nome": "Pedro Valente Toledo",
+        "rm": "RM570394"
+      },
+      {
+        "nome": "Renan Mano Otero",
+        "rm": "RM573615"
+      }
+    ]
+  },
+  "modulos": [
+    {
+      "id": "MOD-HAB-01",
+      "nome": "Habitação",
+      "setor": "Suporte à Vida",
+      "status": "operacional",
+      "essencial": true,
+      "consumo_kw": 45.0,
+      "ultima_manutencao": "2026-08-27"
+    },
+    {
+      "id": "MOD-LOG-01",
+      "nome": "Centro de Controle",
+      "setor": "Operações",
+      "status": "operacional",
+      "essencial": true,
+      "consumo_kw": 60.0,
+      "ultima_manutencao": "2026-08-30"
+    },
+    {
+      "id": "MOD-ENE-01",
+      "nome": "Armazenamento de Energia",
+      "setor": "Energia",
+      "status": "operacional",
+      "essencial": true,
+      "consumo_kw": 10.0,
+      "ultima_manutencao": "2026-08-29"
+    },
+    {
+      "id": "MOD-AGR-01",
+      "nome": "Agricultura",
+      "setor": "Produção de Alimentos",
+      "status": "aguardando_pouso",
+      "essencial": true,
+      "consumo_kw": 35.0,
+      "ultima_manutencao": "2026-08-24"
+    },
+    {
+      "id": "MOD-LAB-01",
+      "nome": "Laboratório Científico",
+      "setor": "Pesquisa",
+      "status": "inativo",
+      "essencial": false,
+      "consumo_kw": 55.0,
+      "ultima_manutencao": "2026-08-23"
+    },
+    {
+      "id": "MOD-COM-01",
+      "nome": "Comunicação",
+      "setor": "Telecomunicações",
+      "status": "operacional",
+      "essencial": true,
+      "consumo_kw": 40.0,
+      "ultima_manutencao": "2026-08-31"
+    },
+    {
+      "id": "MOD-MED-01",
+      "nome": "Suporte Médico",
+      "setor": "Saúde",
+      "status": "inativo",
+      "essencial": true,
+      "consumo_kw": 30.0,
+      "ultima_manutencao": "2026-08-25"
+    },
+    {
+      "id": "MOD-OXI-01",
+      "nome": "Produção de Oxigênio",
+      "setor": "Suporte à Vida",
+      "status": "operacional",
+      "essencial": true,
+      "consumo_kw": 50.0,
+      "ultima_manutencao": "2026-08-31"
+    }
+  ],
+  "alertas": [
+    {
+      "id": "ALT-001",
+      "data_hora": "2026-09-01T08:15:00",
+      "modulo_id": "MOD-OXI-01",
+      "tipo": "pressao_oxigenio",
+      "falha": true,
+      "critico": true,
+      "consumo_elevado": false,
+      "seguranca_ok": true,
+      "dados_consistentes": true,
+      "mensagem": "Queda de 18% na pressão da linha principal de oxigênio em cinco minutos.",
+      "status": "aberto",
+      "prioridade_calculada": "critica"
+    },
+    {
+      "id": "ALT-002",
+      "data_hora": "2026-09-01T09:40:00",
+      "modulo_id": "MOD-ENE-01",
+      "tipo": "consumo_energetico",
+      "falha": false,
+      "critico": false,
+      "consumo_elevado": true,
+      "seguranca_ok": true,
+      "dados_consistentes": true,
+      "mensagem": "Consumo do banco de baterias 22% acima da média operacional.",
+      "status": "em_analise",
+      "prioridade_calculada": "alta"
+    },
+    {
+      "id": "ALT-003",
+      "data_hora": "2026-09-01T10:05:00",
+      "modulo_id": "MOD-LAB-01",
+      "tipo": "consumo_energetico",
+      "falha": false,
+      "critico": false,
+      "consumo_elevado": true,
+      "seguranca_ok": true,
+      "dados_consistentes": true,
+      "mensagem": "Pico temporário de consumo durante a calibração de instrumentos científicos.",
+      "status": "monitoramento",
+      "prioridade_calculada": "normal"
+    },
+    {
+      "id": "ALT-004",
+      "data_hora": "2026-09-01T11:20:00",
+      "modulo_id": "MOD-COM-01",
+      "tipo": "inconsistencia_de_telemetria",
+      "falha": false,
+      "critico": false,
+      "consumo_elevado": false,
+      "seguranca_ok": false,
+      "dados_consistentes": true,
+      "mensagem": "Canal secundário de telemetria recebeu pacote sem assinatura de segurança válida.",
+      "status": "bloqueado",
+      "prioridade_calculada": "critica"
+    }
+  ],
+  "solicitacoes": [
+    {
+      "id": "SOL-001",
+      "data_hora": "2026-09-01T12:00:00",
+      "setor": "Saúde",
+      "urgente": true,
+      "descricao": "Priorizar diagnóstico remoto enquanto o módulo médico permanece em órbita.",
+      "status": "pendente"
+    },
+    {
+      "id": "SOL-002",
+      "data_hora": "2026-09-01T13:10:00",
+      "setor": "Pesquisa",
+      "urgente": false,
+      "descricao": "Reservar janela de energia para calibração dos sensores do laboratório.",
+      "status": "agendada"
+    }
+  ],
+  "interacoes": [],
+  "prompts": {
+    "zero_shot": {
+      "objetivo": "Analisar um alerta sem fornecer exemplos anteriores.",
+      "tecnica": "zero-shot",
+      "saida": "JSON válido com prioridade, resumo, ação e justificativa lógica"
+    },
+    "few_shot": {
+      "objetivo": "Padronizar a classificação por meio de exemplos de entrada e saída.",
+      "tecnica": "few-shot",
+      "exemplos": [
+        {
+          "entrada": {
+            "alerta_id": "EX-001",
+            "falha": true,
+            "critico": true,
+            "consumo_elevado": false,
+            "modulo_essencial": true,
+            "mensagem": "Falha confirmada no controle térmico."
+          },
+          "saida": {
+            "alerta_id": "EX-001",
+            "prioridade": "critica",
+            "acao_recomendada": "Isolar o subsistema e acionar o Centro de Controle.",
+            "requer_supervisao_humana": true
+          }
+        },
+        {
+          "entrada": {
+            "alerta_id": "EX-002",
+            "falha": false,
+            "critico": false,
+            "consumo_elevado": true,
+            "modulo_essencial": false,
+            "mensagem": "Pico temporário durante experimento."
+          },
+          "saida": {
+            "alerta_id": "EX-002",
+            "prioridade": "normal",
+            "acao_recomendada": "Registrar e manter monitoramento de rotina.",
+            "requer_supervisao_humana": false
+          }
+        }
+      ]
+    },
+    "structured_output": {
+      "formato": "JSON",
+      "campos_obrigatorios": {
+        "alerta_id": "string",
+        "modulo": "string",
+        "prioridade": "critica | alta | normal",
+        "resumo": "string",
+        "acao_recomendada": "string",
+        "requer_supervisao_humana": "boolean",
+        "justificativa_logica": "string",
+        "observacao_etica": "string"
+      },
+      "restricoes": [
+        "Não inventar dados ausentes",
+        "Não utilizar características pessoais para priorização",
+        "Manter supervisão humana em decisões críticas",
+        "Retornar somente JSON válido"
+      ]
+    },
+    "avaliacao_otimizacao": {
+      "descricao": "Avaliação simulada e educacional; não representa treinamento real de modelo.",
+      "criterios": [
+        "clareza",
+        "completude",
+        "formato",
+        "seguranca"
+      ],
+      "pontuacao_alvo": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "prompt_generico": {
+        "texto": "Analise este alerta e diga o que fazer.",
+        "pontuacoes": [
+          0.55,
+          0.6,
+          0.4,
+          0.65
+        ]
+      },
+      "prompt_otimizado": {
+        "texto": "Analise o alerta pela regra F OR (E AND M), não invente dados, classifique a prioridade, proponha ação segura, preserve supervisão humana e retorne somente JSON no esquema definido.",
+        "pontuacoes": [
+          0.92,
+          0.95,
+          1.0,
+          0.96
+        ]
+      }
+    }
+  }
+}

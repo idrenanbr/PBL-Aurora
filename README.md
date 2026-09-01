@@ -9,7 +9,7 @@ Projeto desenvolvido para o **Project Based Learning (PBL)** da FIAP, com foco e
 
 ## Visão Geral
 
-O projeto evolui em quatro fases integradas, cobrindo desde a validação inicial da missão até a operação inteligente da base marciana. Ao longo do sistema, são aplicados conceitos de lógica, estruturas de dados, algoritmos, modelagem matemática e otimização computacional para representar desafios reais de automação e tomada de decisão em ambiente crítico.
+O projeto evolui em cinco fases integradas, cobrindo desde a validação inicial da missão até a criação de um núcleo cognitivo para organizar dados e apoiar decisões na base marciana. Ao longo do sistema, são aplicados conceitos de lógica, estruturas de dados, algoritmos, modelagem matemática, arquivos, engenharia de prompts e otimização computacional para representar desafios reais de automação e tomada de decisão em ambiente crítico.
 
 <br>
 
@@ -673,6 +673,51 @@ Digite a opção desejada: 4
 
 <br>
 
+### 🧠 Fase 5: Núcleo Cognitivo da Aurora Siger (NCAS)
+
+Organiza informações operacionais da colônia em arquivos texto e JSON, aplica regras booleanas simplificadas e simula respostas inteligentes por meio de prompts zero-shot, few-shot e saídas estruturadas.
+
+<details>
+<summary>Clique para ver a Fase 5 em detalhe</summary>
+
+## Visão Geral da Fase
+
+O NCAS funciona como uma camada de apoio computacional à decisão. O sistema mantém módulos, alertas, solicitações e interações em JSON, registra uma trilha cronológica em TXT e oferece um menu completo no terminal.
+
+## Recursos implementados
+
+- Cadastro e consulta persistente de alertas da colônia.
+- Leitura, escrita e acréscimo de arquivos com `with open`.
+- Regra original `(F AND C) OR (F AND NOT C) OR (E AND M)`.
+- Simplificação equivalente `F OR (E AND M)`.
+- Bloqueio por De Morgan: `NOT(S AND D) = (NOT S) OR (NOT D)`.
+- Prompts zero-shot e few-shot.
+- Saída estruturada em JSON.
+- Assistente inteligente simulado localmente, sem API obrigatória.
+- Comparação didática de prompts por erro quadrático médio.
+- Explicações sobre memória, barramentos, armazenamento e fluxo de dados.
+- Controles de supervisão humana, diversidade, ética e prevenção de vieses.
+
+## Execução
+
+```bash
+cd Fase_5_NCAS
+python codigo_fonte.py
+```
+
+Demonstração automática e autoteste:
+
+```bash
+python codigo_fonte.py --demo
+python codigo_fonte.py --self-test
+```
+
+Todos os arquivos obrigatórios e o roteiro do vídeo estão disponíveis em [`Fase_5_NCAS`](Fase_5_NCAS/).
+
+</details>
+
+<br>
+
 ## Tecnologias Utilizadas
 
 - Python 3.9+
@@ -685,6 +730,12 @@ Digite a opção desejada: 4
 - Grafos e matriz de adjacência
 - Algoritmos de grafos (BFS, DFS e Dijkstra)
 - Estruturas de dados em Python (dicionários, tuplas, listas)
+- Arquivos texto e JSON
+- Álgebra booleana e Teoremas de De Morgan
+- Prompt Engineering: zero-shot e few-shot
+- Structured outputs em JSON
+- Simulação local de assistente inteligente
+- Erro quadrático médio aplicado à avaliação de prompts
 - Simulação e interação via menu em terminal
 - Integração entre microsserviços em pipeline
 
@@ -701,7 +752,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 ### Passo a Passo Para Executar
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/JFrois/PBL-Aurora.git
+    git clone https://github.com/idrenanbr/PBL-Aurora.git
     cd PBL-Aurora
     ```
 
@@ -731,7 +782,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 ### Executando o projeto
 
-O projeto possui duas formas principais de execução:
+O projeto possui três formas principais de execução:
 
 - **Para executar a simulação integrada, digite no console:**
   ```bash
@@ -743,7 +794,13 @@ O projeto possui duas formas principais de execução:
   python codigo/fase4.py
   ```
 
-Observação: o arquivo requirements.txt é utilizado para o projeto integrado, especialmente para as fases com apoio de IA. A Fase 4/SIGIC pode ser executada isoladamente com recursos básicos de Python pelo arquivo codigo/fase4.py.
+- **Para executar o NCAS da Fase 5, sem dependências externas:**
+  ```bash
+  cd Fase_5_NCAS
+  python codigo_fonte.py
+  ```
+
+Observação: o arquivo requirements.txt é utilizado para o projeto integrado, especialmente para as fases com apoio de IA. A Fase 4 e a Fase 5 podem ser executadas isoladamente. O NCAS utiliza somente a biblioteca padrão do Python.
 
 <br>
 
@@ -760,6 +817,16 @@ PBL-Aurora/
 │   ├── fase3.py                    # Sistema de funcionamento inteligente da colônia
 │   ├── fase4.py                    # SIGIC: gerenciamento da infraestrutura da colônia
 │   └── main.py                     # Orquestrador Central e Integração IA
+├── Fase_5_NCAS/
+│   ├── codigo_fonte.py             # Sistema principal da Fase 5
+│   ├── dados_colonia.json          # Dados estruturados do NCAS
+│   ├── registros_colonia.txt       # Logs e registros persistentes
+│   ├── regras_logicas.pdf          # Simplificação e De Morgan
+│   ├── prompts_utilizados.pdf      # Prompts, otimização, memória e ética
+│   ├── link_video.txt              # Link da apresentação não listada
+│   ├── roteiro_video.md            # Roteiro cronometrado de até 5 minutos
+│   ├── entrega_fase5_ncas.zip      # Pacote pronto para envio no portal
+│   └── README.md                   # Documentação específica da Fase 5
 └── Documentos/
     ├── rede_colonia.pdf            # Diagrama visual da rede da colônia
     └── relatorio_pbl_fase4.pdf     # Documentação complementar / relatório técnico da Fase 4
